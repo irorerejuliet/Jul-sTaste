@@ -5,7 +5,7 @@ const HeroSection = ({title, image, type}) => {
     <div className="w-full h-[100vh] mt-28">
       <div className="relative w-full h-full">
         <img
-          src="/public/Images/Banner-8.webp"
+          src="/Images/Banner-8.webp"
           className="w-full h-full object-cover"
         />
       </div>

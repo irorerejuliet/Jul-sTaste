@@ -18,13 +18,34 @@ const NavBar = () => {
             className="flex items-center justify-center  text-lg cursor-pointer w-24 "
           />
         </Link>
-        <NavLink className="hidden md:flex text-white gap-6">
+        <NavLink className="hidden md:flex text-white gap-20">
           <Link to="/">Home</Link>
           <Link to="/recipeDetails">Explore</Link>
           <Link to="">Favourite</Link>
         </NavLink>
+        <Button
+          title="Sign in"
+          containerStyle="hidden md:block bg-transparent border border-white text-white hover:bg-white hover:text-slate-700 rounded-full min-w-[130px]"
+        />
+        <button
+          className="block md:hidden text-white text-xl"
+          onClick={() => setOpen((prev) => !prev)}
+        >
+          {open ? <AiOutlineClose /> : <HiMenuAlt1 />}
+        </button>
       </nav>
-      <button title='Sign in' conteinerStyle='hidden md:block bg-transparent border border-white text-white hover:bg-white hover:text-slate-700 rounded-full min-w-[130px]'/>
+
+      {/* Mobile NavBar */}
+      <div
+        className={`${
+          open ? "flex" : "hidden"
+        } bg-black flex-col w-full px-4 pt-16 pb-10 text-white gap-6 text-[14px]`}
+      >
+        <Link to="/">Home</Link>
+        <Link to="/recipeDetails">Explore</Link>
+        <Link to="/">Favourite</Link>
+        <Link to="/">contact</Link>
+      </div>
     </header>
   );
 }
