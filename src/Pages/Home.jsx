@@ -1,12 +1,16 @@
 import React from 'react'
 import HeroSection from '../Components/HeroSection'
 
+import Recipes from '../Components/Recipes';
+
 const Home = () => {
   return (
-    <div className="w-full flex flex-col">
+    <main className="w-full flex flex-col">
       <HeroSection title={<p>Taste the World with jul'sTaste!</p>}  type='Home'/>
-    
-    </div>
+    <section id='recipeDetails'  className='md:max-w-[140px] mx-auto px-4 md:'>
+      <Recipes/>
+    </section>
+    </main>
   );
 }
 
