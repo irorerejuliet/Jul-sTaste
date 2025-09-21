@@ -24,7 +24,7 @@ const Recipes = () => {
     <div className="w-full">
       <div className="w-full flex items-center justify-center px-0 md:px-10">
         <form className="w-full lg:w-2/4">
-        <SearchBar placeholder="eg. Cake, Vegan, Chicken"
+        <SearchBar placeholder="eg. Cake, Vegan, Chicken e.t.c"
         handleInputChange={handleChange}
         rightIcon={<BiSearchAlt2 className="text-gray-600"/>}
         />

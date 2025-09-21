@@ -22,6 +22,7 @@ const NavBar = () => {
           <Link to="/">Home</Link>
           <Link to="/recipeDetails">Explore</Link>
           <Link to="">Favourite</Link>
+          <Link to="">Contact</Link>
         </NavLink>
         <Button
           title="Sign in"
