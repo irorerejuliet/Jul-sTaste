@@ -18,7 +18,7 @@ const NavBar = () => {
             className="flex items-center justify-center  text-lg cursor-pointer w-24 "
           />
         </Link>
-        <NavLink className="hidden md:flex text-white gap-20">
+        <NavLink className="hidden md:flex text-white gap-20 ">
           <Link to="/">Home</Link>
           <Link to="/recipeDetails">Explore</Link>
           <Link to="">Favourite</Link>
