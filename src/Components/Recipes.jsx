@@ -22,11 +22,11 @@ const Recipes = () => {
     }
   return (
     <div className="w-full">
-      <div className="w-full flex items-center justify-center px-0 md:px-10">
+      <div className="w-full flex items-center justify-center pt-10 pb-5 px-0 md:px-10">
         <form className="w-full lg:w-2/4">
-        <SearchBar placeholder="eg. Cake, Vegan, Chicken e.t.c"
+        <SearchBar placeholder="eg. Cake, Vegan, Chicken"
         handleInputChange={handleChange}
-        rightIcon={<BiSearchAlt2 className="text-gray-600"/>}
+        rightIcon={<BiSearchAlt2 className="text-gray-500"/>}
         />
         </form>
 

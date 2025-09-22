@@ -1,6 +1,6 @@
 import React from 'react'
 
-const HeroSection = ({title, image, type}) => {
+const HeroSection = ({title, type}) => {
   return (
     <div className="w-full h-[100vh] ">
       <div className="relative w-full h-full">
