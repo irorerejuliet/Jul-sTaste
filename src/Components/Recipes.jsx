@@ -2,11 +2,11 @@ import { useEffect, useState } from "react"
 import { BiSearchAlt2, BiSolidSearchAlt2 } from "react-icons/bi"
 import Loading from "./Loading"
 import SearchBar from "./SearchBar"
-import { BsSearch } from "react-icons/bs"
 import RecipeCard from "./RecipeCard"
 import.meta.env.VITE_EDAMAM_API_ID;
 import.meta.env.VITE_EDAMAM_API_KEY;
 import { fetchRecipes } from "../utils"
+import { data } from "autoprefixer"
 
 
 const Recipes = () => {
