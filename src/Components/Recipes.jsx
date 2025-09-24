@@ -1,9 +1,12 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { BiSearchAlt2, BiSolidSearchAlt2 } from "react-icons/bi"
 import Loading from "./Loading"
 import SearchBar from "./SearchBar"
 import { BsSearch } from "react-icons/bs"
 import RecipeCard from "./RecipeCard"
+import.meta.env.VITE_EDAMAM_API_ID;
+import.meta.env.VITE_EDAMAM_API_KEY;
+import { fetchRecipes } from "../utils"
 
 
 const Recipes = () => {
@@ -15,6 +18,31 @@ const Recipes = () => {
     const handleChange =(e) => {
       setQuery(e.target.value)
     }
+
+
+    const fetchRecipe = async() => {
+
+      try {
+        const data = await fetchRecipes({ query, limit });
+
+        setRecipes(data);
+
+        setLoading(false);
+        
+      } catch (error) {
+        console.log(error);
+      }finally{
+        setLoading(false)
+      }
+    };
+
+
+    useEffect(() =>{
+     setLoading(true)
+
+      fetchRecipe()
+
+    }, [])
 
     if(loading){
         return(
