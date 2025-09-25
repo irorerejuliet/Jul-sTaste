@@ -65,8 +65,8 @@ const Recipes = () => {
           <>
           <div className="w-full flex flex-wrap gap-10 px-0 lg:px-10 py-10">
           {
-            recipes.map((items, id) =>(
-              <RecipeCard recipes={recipes} key={id}/>
+            recipes.map((item, id) =>(
+              <RecipeCard recipe={item} key={id}/>
             ))
           }
           </div>

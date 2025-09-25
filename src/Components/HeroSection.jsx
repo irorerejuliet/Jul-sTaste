@@ -9,7 +9,7 @@ const HeroSection = ({title, type}) => {
           className="w-full h-full object-cover"
         />
       </div>
-      <div className="absolute w-full h-full bg-gradient-to-t from-black to-transparent  top-0  flex-col items-center justify-center  px-4">
+      <div className="absolute w-full h-full bg-gradient-to-t from-black to-transparent  top-0  flex-col items-center justify-center  pt-40 px-4">
         <h1 className="text-white text-4xl md:text-5xl font-bold text-center md:mt-[32rem] mt-[20rem] md:w-[480px] w-[300px] m-auto">
           {title}
         </h1>
