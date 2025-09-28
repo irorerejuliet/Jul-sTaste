@@ -16,7 +16,7 @@ const HeroSection = ({title, type}) => {
         {type && (
           <p className="md:text-sm text-xs mt-6 text-center text-green-800 bg-[#00000090] px-6 py-4 rounded-full md:w-[480px] border border-green-900 w-[300px] m-auto">
             Welcome to JulsTaste, Your passport to culinary adventure! Discover
-            a treasure trove of delectable recipes from around the globe
+            a treasure trove of delectable recipes from around the globe eat an come back  for more
           </p>
         )}
       </div>
