@@ -11,7 +11,7 @@ const SearchBar = ({type, placeholder, required = false, value, name, handleInpu
           value={value}
           onChange={handleInputChange}
           required={required}
-          className={`bg-black border border-gray-600 text-gray-300 text-sm  rounded-full focus:ring-1 focus:ring-slate-800 focus:border-slate-800 block p-2.5 outline-none px-8 placeholder:text-sm shadow-xl`}
+          className={`bg-black border border-gray-600 text-gray-300 text-sm  rounded-full focus:ring-1 focus:ring-slate-800 focus:border-slate-800 block  p-2.5 outline-none px-8 placeholder:text-sm shadow-xl`}
         />
         {rightIcon && (
           <div className="absolute inset-y-0 right-0 flex items-center  pr-4 cursor-pointer">
