@@ -7,14 +7,14 @@ import RecipeDetails from './Pages/RecipeDetails'
 
 const App = () => {
   return (
-    <>
+    <div className='bg-black'>
       <NavBar />
       <Routes>
         <Route index="/" element={<Home />} />
         <Route path="/recipeDetails/:id" element={<RecipeDetails />} />
       </Routes>
       <Footer />
-    </>
+    </div>
   );
 }
 
