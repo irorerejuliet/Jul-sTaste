@@ -51,7 +51,7 @@ const Recipes = () => {
     }
   return (
     <div className="w-full relative">
-      <div className="w-full flex items-center justify-center pt-10 pb-5 px-0 md:px-10 absolute bottom-20">
+      <div className="w-full items-center justify-center pt-10 pb-5 px-0 md:px-10 absolute bottom-20">
         <form className="w-full lg:w-2/4">
         <SearchBar placeholder="eg. Cake, Vegan, Chicken"
         handleInputChange={handleChange}
@@ -63,13 +63,13 @@ const Recipes = () => {
       {
         recipes?.length > 0 ? (
           <>
-          <div className="w-full  flex flex-wrap gap-10 px-0 lg:px-10 py-10">
+         
           {
             recipes.map((item, id) =>(
               <RecipeCard recipe={item} key={id}/>
             ))
           }
-          </div>
+         
           </>
           
         ):<div className=" w-full items-center justify-center py-10">
@@ -81,3 +81,5 @@ const Recipes = () => {
 }
 
 export default Recipes
+
+//  <div className="w-full flex flex-wrap gap-10 px-0 lg:px-10 py-10">

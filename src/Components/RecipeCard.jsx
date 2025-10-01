@@ -12,11 +12,11 @@ const RecipeCard = ({recipe}) => {
 
   return (
     <Link to={`/recipes/${id}`} className=" ">
-      <div className="bg-gradient-to-t from-black to-transparent shadow rounded-lg ">
+      <div className="bg-gradient-to-t from-black to-transparent shadow rounded-lg py-10">
         <img
           src={image}
           alt={label}
-          className="rounded-lg w-full  object-cover"
+          className="rounded-lg   object-cover"
         />
       </div>
     </Link>
