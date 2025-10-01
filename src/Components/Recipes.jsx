@@ -51,7 +51,7 @@ const Recipes = () => {
     }
   return (
     <div className="w-full relative">
-      <div className="w-full items-center justify-center pt-10 pb-5 px-0 md:px-10 absolute bottom-20">
+      <div className="w-full flex  items-center justify-center pt-10 pb-5 px-0 md:px-10 absolute bottom-20">
         <form className="w-full lg:w-2/4">
         <SearchBar placeholder="eg. Cake, Vegan, Chicken"
         handleInputChange={handleChange}
@@ -72,7 +72,7 @@ const Recipes = () => {
          
           </>
           
-        ):<div className=" w-full items-center justify-center py-10">
+        ):<div className=" w-full items-center justify-center py-10 text-white">
           <p className="text-center">No Recipe found</p>
         </div>
       }
