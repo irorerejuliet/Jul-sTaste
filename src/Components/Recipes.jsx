@@ -65,7 +65,7 @@ const Recipes = () => {
           <>
          
           {
-            recipes.map((item, id) =>(
+            recipes?.map((item, id) =>(
               <RecipeCard recipe={item} key={id}/>
             ))
           }
