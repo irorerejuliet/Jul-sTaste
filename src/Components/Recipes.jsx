@@ -19,7 +19,7 @@ const Recipes = () => {
       setQuery(e.target.value)
     }
 
-
+const shpowMore =
     const fetchRecipe = async() => {
 
       try {
@@ -69,6 +69,10 @@ const Recipes = () => {
               <RecipeCard recipe={item} key={id}/>
             ))
           }
+
+          <div className="flex justify-between items-center py-10">
+            <button className="bg-green-800 text-white px-3 py-1 rounded-full text-sm" onClick={showMore}>Show more</button>
+          </div>
          
           </>
           
