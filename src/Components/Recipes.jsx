@@ -19,7 +19,16 @@ const Recipes = () => {
       setQuery(e.target.value)
     }
 
-const shpowMore =
+    const handleSearchRecipe = async (e) => {
+      
+    }
+
+    const showMore =() =>{
+      setLimit(prev => prev + 10)
+      fetchRecipe()
+    }
+
+
     const fetchRecipe = async() => {
 
       try {
