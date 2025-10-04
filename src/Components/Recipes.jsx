@@ -24,11 +24,7 @@ const Recipes = () => {
       fetchRecipe
     }
 
-    const showMore =() =>{
-      setLimit(prev => prev + 10)
-      fetchRecipe()
-    }
-
+    
 
     const fetchRecipe = async() => {
 
@@ -47,6 +43,13 @@ const Recipes = () => {
     };
 
 
+    const showMore = () => {
+      setLimit((prev) => prev + 10);
+      fetchRecipe();
+    };
+
+
+
     useEffect(() =>{
      setLoading(true)
 
@@ -62,7 +65,7 @@ const Recipes = () => {
   return (
     <div className="w-full relative">
       <div className="w-full flex  items-center justify-center pt-10 pb-5 px-0 md:px-10 absolute bottom-20">
-        <form className="w-full lg:w-2/4" onSubmit={handleSearchRecipe}>
+        <form className="w-full lg:w-2/4 bg-yellow-400" onSubmit={handleSearchRecipe}>
         <SearchBar placeholder="eg. Cake, Vegan, Chicken"
         handleInputChange={handleChange}
         rightIcon={<BiSearchAlt2 className="text-gray-500"/>}
