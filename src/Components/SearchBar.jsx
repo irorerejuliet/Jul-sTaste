@@ -14,7 +14,7 @@ const SearchBar = ({type, placeholder, required = false, value, name, handleInpu
           className={`bg-black border border-gray-600 text-gray-300 text-sm  rounded-full focus:ring-1 focus:ring-slate-800 focus:border-slate-800 block  p-2.5 outline-none px-5 placeholder:text-sm shadow-xl`}
         />
         {rightIcon && (
-          <div className="absolute inset-y-0 right-0 flex items-center  pr-4 cursor-pointer">
+          <div className="absolute inset-y-0 left-10 flex items-center  pr-4 cursor-pointer">
             {rightIcon}
           </div>
         )}
