@@ -11,7 +11,7 @@ const RecipeCard = ({recipe}) => {
   //   images?.LARGE?.url || images?.REGULAR?.url || recipe?.recipe.image;
 
   return (
-    <Link to={`/recipes/${id}`} className=" w-full md:[220px]">
+    <Link to={`/recipes/${id}`} className=" w-full ">
       <div className="bg-gradient-to-t from-black to-transparent shadow rounded-lg py-10">
         <img
           src={image}
