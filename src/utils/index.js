@@ -1,31 +1,20 @@
-// export async function fetchRecipes (filter) {
-//     const {query, limit} = filter;
-
-//     const url = `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${
-//       import.meta.env.VITE_EDAMAM_API_ID
-//     }&app_key=${import.meta.env.VITE_EDAMAM_API_KEY}&from=0&to=${limit}`;
-
-
-    
-
-// const response = await fetch(url)
-
-// const data = await response.json();
-// console.log(data);
-// return data?.hints;
-// }
 export async function fetchRecipes({ query, limit }) {
-  const url = `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${
-import.meta.env.VITE_EDAMAM_API_ID
-  }&app_key=${import.meta.env.VITE_EDAMAM_API_KEY}&from=0&to=${limit}`;
-console.log(import.meta.env.VITE_EDAMAM_USER_ID);
-  const response = await fetch(url, {
-    headers: {
-      "Edamam-Account-User": import.meta.env.VITE_EDAMAM_USER_ID,
-    },
-  });
+  let url = "https://dummyjson.com/recipes";
+  try {
+    if (query) {
+      return `${url}/search?q=${query}`;
+    }
 
-  const data = await response.json();
-  console.log(data);
-  return data?.hits; // adjust based on what Edamam returns
+    const response = await fetch(`${url}?limit=${limit}`);
+
+    if (!response?.ok) {
+      return new Error("Recipes Failed to load");
+    }
+    const data = await response.json();
+
+    return data.recipes || [];
+  } catch (error) {
+    console.error("Error fetching recipes:", error);
+    return [];
+  }
 }

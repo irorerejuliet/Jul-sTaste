@@ -1,14 +1,10 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-const RecipeCard = ({recipe}) => {
-  const { image, label, cuisineType, dietLabel, mealType, uri } = recipe?.recipe
+const RecipeCard = ({ recipe }) => {
+  const { image, label, cuisineType, name, mealType, uri } = recipe;
 
-  const id = uri?.split("#")[1]
-
-  // // Prefer LARGE image > REGULAR > fallback to image
-  // const largeImage =
-  //   images?.LARGE?.url || images?.REGULAR?.url || recipe?.recipe.image;
+  const id = uri?.split("#")[1];
 
   return (
     <Link to={`/recipes/${id}`} className=" w-full ">
@@ -16,15 +12,15 @@ const RecipeCard = ({recipe}) => {
         <img
           src={image}
           alt={label}
-          className="rounded-lg  w-full  object-cover"
+          className="rounded-lg  w-[450px]  object-cover"
         />
         <div className="p-3">
-          <p className="text-white font-semibold">{label}</p>
+          <p className="text-white font-semibold">{name}</p>
           <div className="mt-2">
             <span className="px-2 py-1 text-[12px] capitalize bg-[#0c452243] shadow-xl rounded-full mr-3 text-green-500">
               {cuisineType}
             </span>
-            <span className="px-2 py-1 text-[12px] capitalize bg-[#0c452243] shadow-xl rounded-full mr-8  text-green-500">
+            <span className="px-2 py-1 text-[12px] capitalize bg-[#0c452243] shadow-xl rounded-full   text-green-500">
               {mealType}
             </span>
           </div>
@@ -32,6 +28,6 @@ const RecipeCard = ({recipe}) => {
       </div>
     </Link>
   );
-}
+};
 
-export default RecipeCard
+export default RecipeCard;
