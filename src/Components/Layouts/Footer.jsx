@@ -18,8 +18,8 @@ const Footer = () => {
         </div>
         <div>
           <p>QUICK LINKS</p>
-          <div className='flex'>
-            
+          <div className='flex flex-col text-start mb-4 md'>
+
           </div>
         </div>
       </div>
