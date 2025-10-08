@@ -7,17 +7,18 @@ import { fetchRecipes } from "../utils";
 
 const Recipes = () => {
   const [recipes, setRecipes] = useState([]);
+  const [search, setSearch] = useState("");
   const [query, setQuery] = useState("");
   const [limit, setLimit] = useState(10);
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
-    setQuery(e.target.value);
+    setSearch(e.target.value);
   };
 
   const handleSearchRecipe = async (e) => {
     e.preventDefault();
-    setLoading(true);
+    setQuery(search);
   };
 
   const showMore = () => {
@@ -37,7 +38,7 @@ const Recipes = () => {
       }
     };
     fetchRecipe();
-  }, [query, limit]);
+  }, [limit, query]);
 
   if (loading) {
     return <Loading />;
@@ -48,7 +49,8 @@ const Recipes = () => {
       <div className="w-full flex items-center justify-center pt-10 pb-5 px-0 md:px-10">
         <form className="w-full lg:w-2/4" onSubmit={handleSearchRecipe}>
           <SearchBar
-            placeholder="eg. Cake, Vegan, Chicken"
+            placeholder="eg. Cake, Pasta, Beef, Chocolate"
+            value={search}
             handleInputChange={handleChange}
             rightIcon={<BiSearchAlt2 className="text-gray-500" />}
           />
