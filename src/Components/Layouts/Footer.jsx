@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaFacebook } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -17,7 +17,7 @@ const Footer = () => {
             </Link>
           </p>
         </div>
-        <div className='pt-20'>
+        <div className="pt-20">
           <p>LEGAL</p>
           <div className="flex flex-col text-start mb-4 md:mb-0">
             <Link
@@ -52,32 +52,32 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <div className='pt-20'>
+        <div className="pt-20">
           <p>QUICK LINKS</p>
           <div className="flex flex-col text-start mb-4 md:mb-0">
             <Link
               to="/"
               className="block md:inline-block py-2 hover:text-gray-500"
             >
-             Terms and Conditions
+              Terms and Conditions
             </Link>
             <Link
               to="/recipeDetails"
               className="block md:inline-block py-2 hover:text-gray-500"
             >
-             LIcense Agreement
+              LIcense Agreement
             </Link>
             <Link
               to=""
               className="block md:inline-block py-2 hover:text-gray-500"
             >
-             Privacy Policy
+              Privacy Policy
             </Link>
             <Link
               to=""
               className="block md:inline-block py-2 hover:text-gray-500"
             >
-             Copyright Information
+              Copyright Information
             </Link>
             <Link
               to=""
@@ -87,13 +87,34 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <div className='flex flex-col pt-20'>
-        <p>SOCIAL MEDIA</p>
-        <div className='flex mt-4 gap-4'>
-          <Link>
-          <FaFacebook size={18}/>
-          </Link>
-        </div>
+        <div className="flex flex-col pt-20">
+          <p>SOCIAL MEDIA</p>
+          <div className="flex mt-4 gap-4">
+            <Link
+              to=""
+              className="bg-blue-600 p-1 rounded-sm text-white hover:text-gray-500 hover:scale-110"
+            >
+              <FaFacebook size={18} />
+            </Link>
+            <Link
+              to=""
+              className="bg-pink-600 p-1 rounded-sm text-white hover:text-gray-500 hover:scale-110"
+            >
+              <FaInstagram size={18} />
+            </Link>
+            <Link
+              to=""
+              className="bg-blue-900 p-1 rounded-sm text-white hover:text-gray-500 hover:scale-110"
+            >
+              <FaTwitter size={18} />
+            </Link>
+            <Link
+              to=""
+              className="bg-red-600 p-1 rounded-sm text-white hover:text-gray-500 hover:scale-110"
+            >
+              <FaYoutube size={18} />
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
