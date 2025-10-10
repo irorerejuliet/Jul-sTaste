@@ -1,4 +1,5 @@
 import React from 'react'
+import { FaFacebook } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -17,7 +18,7 @@ const Footer = () => {
           </p>
         </div>
         <div className='pt-20'>
-          <p>QUICK LINKS</p>
+          <p>LEGAL</p>
           <div className="flex flex-col text-start mb-4 md:mb-0">
             <Link
               to="/"
@@ -85,6 +86,14 @@ const Footer = () => {
               Cookies Policy
             </Link>
           </div>
+        </div>
+        <div className='flex flex-col pt-20'>
+        <p>SOCIAL MEDIA</p>
+        <div className='flex mt-4 gap-4'>
+          <Link>
+          <FaFacebook size={18}/>
+          </Link>
+        </div>
         </div>
       </div>
     </footer>
