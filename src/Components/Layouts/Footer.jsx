@@ -123,8 +123,11 @@ const Footer = () => {
           />
         </div>
       </div>
+      <div className='flex items-center justify-center py-10'>
+        <span className='text-gray-400 mt-20'>CodeJhay &copy;2025</span>
+      </div>
     </footer>
   );
 }
 
-export default Footer
+export default Footer 
