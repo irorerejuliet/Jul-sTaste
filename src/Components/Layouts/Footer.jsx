@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import Button from '../Button';
 
 const Footer = () => {
   return (
@@ -115,6 +116,11 @@ const Footer = () => {
               <FaYoutube size={18} />
             </Link>
           </div>
+          <Button title='Sign up'
+          btnType='button'
+          containerStyle='mt-10
+          md:block bg-transparent border boredr-white text-white hover:bg-white hover:text-black rounded-md min-w-[130px]'
+          />
         </div>
       </div>
     </footer>
