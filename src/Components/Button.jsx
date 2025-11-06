@@ -1,6 +1,6 @@
 
 const Button = ({
-    isDisabled, btnType, containerStyle, textStyle, title, rightIcon, handleClick
+    isDisabled, btnType, containerStyle, , title, rightIcon, handleClick
 }) => {
   return (
     <button disabled={isDisabled ?? false} type={btnType || "button"} className={`custom-btn ${containerStyle}`} onClick={handleClick}>
