@@ -24,6 +24,12 @@ export async function fetchRecipes({ query, limit }) {
     return [];
   }
 }
-    // export async function fetchRecipes(id){
-    //   const url = `https://dummyjson.com/recipes`;
-    // }
+    export async function fetchRecipe(id){
+      const url = `https://dummyjson.com/recipes`;
+
+      const response = await fetch(url)
+
+      const data = await response.json();
+
+      return data[0];
+    }

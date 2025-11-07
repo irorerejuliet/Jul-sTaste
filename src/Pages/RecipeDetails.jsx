@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import Loading from '../Components/Loading'
+import HeroSection from '../Components/HeroSection'
 
 const RecipeDetails = () => {
 
@@ -23,6 +25,7 @@ const RecipeDetails = () => {
       setRecipes(recommend);
 
       setLoading(false);
+      
     } catch (error) {
       console.log(error);
 
@@ -37,13 +40,22 @@ const RecipeDetails = () => {
 
   if(loading){
     return(
-      <div><Loading></div>
+      <div className='w-full h-[100vh] flex items-center justify-center'><Loading/></div>
     )
   }
 
   return (
-    <div>
-      
+    <div className='w-full'>
+      <HeroSection title={recipe?.label} image={recipe?.image}/>
+
+      <div className='w-full px-4 lg:px-20 pt-5'>
+
+      </div>
+
+
+      <div className='flex gap-10 items-center justify-center px-4'>
+
+      </div>
     </div>
   )
 }
