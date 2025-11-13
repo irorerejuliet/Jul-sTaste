@@ -34,13 +34,13 @@ const Footer = () => {
               About
             </Link>
             <Link
-              to=""
+              to="/recipeDetails"
               className="block md:inline-block py-2 hover:text-gray-500"
             >
               Service
             </Link>
             <Link
-              to=""
+              to="/recipeDetails"
               className="block md:inline-block py-2 hover:text-gray-500"
             >
               Contact
@@ -116,15 +116,16 @@ const Footer = () => {
               <FaYoutube size={18} />
             </Link>
           </div>
-          <Button title='Sign up'
-          btnType='button'
-          containerStyle='mt-10
-          md:block bg-transparent border boredr-white text-white hover:bg-white hover:text-black rounded-md min-w-[130px]'
+          <Button
+            title="Sign up"
+            btnType="button"
+            containerStyle="mt-10
+          md:block bg-transparent border boredr-white text-white hover:bg-white hover:text-black rounded-md min-w-[130px]"
           />
         </div>
       </div>
-      <div className='flex items-center justify-center py-10'>
-        <span className='text-gray-400 mt-20'>CodeJhay &copy;2025</span>
+      <div className="flex items-center justify-center py-10">
+        <span className="text-gray-400 mt-20">CodeJhay &copy;2025</span>
       </div>
     </footer>
   );
