@@ -40,13 +40,13 @@ const Footer = () => {
               Service
             </Link>
             <Link
-              to="/recipeDetails"
+              to="/contact"
               className="block md:inline-block py-2 hover:text-gray-500"
             >
               Contact
             </Link>
             <Link
-              to=""
+              to="/recipeDetails"
               className="block md:inline-block py-2 hover:text-gray-500"
             >
               Help
@@ -92,7 +92,7 @@ const Footer = () => {
           <p>SOCIAL MEDIA</p>
           <div className="flex mt-4 gap-4">
             <Link
-              to=""
+              to="/"
               className="bg-blue-600 p-1 rounded-sm text-white hover:text-gray-500 hover:scale-110"
             >
               <FaFacebook size={18} />
