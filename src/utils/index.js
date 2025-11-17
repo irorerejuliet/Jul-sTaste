@@ -1,35 +1,32 @@
 export async function fetchRecipes({ query, limit }) {
-  let url = "https://dummyjson.com/recipes";
+  const url = "https://dummyjson.com/recipes";
   console.log(query, "query");
+
   try {
+    let response;
     if (query) {
-      const response = await fetch(`${url}/search?q=${query}`);
-      if (!response?.ok) {
-        return new Error("Recipes Failed to load");
-      }
-      const data = await response.json();
-      return data.recipes || [];
+      response = await fetch(`${url}/search?q=${query}`);
+    } else {
+      response = await fetch(`${url}?limit=${limit}`);
     }
 
-    const response = await fetch(`${url}?limit=${limit}`);
-
-    if (!response?.ok) {
-      return new Error("Recipes Failed to load");
+    if (!response.ok) {
+      throw new Error("Recipes failed to load");
     }
+
     const data = await response.json();
-
     return data.recipes || [];
   } catch (error) {
     console.error("Error fetching recipes:", error);
     return [];
   }
 }
-    export async function fetchRecipe(id){
-      const url = `https://dummyjson.com/recipes`;
+// export async function fetchRecipes(){
+//   const url = `https://dummyjson.com/recipes`;
 
-      const response = await fetch(url)
+//   const response = await fetch(url)
 
-      const data = await response.json();
+//   const data = await response.json();
 
-      return data[0];
-    }
+//   return data[0];
+// }

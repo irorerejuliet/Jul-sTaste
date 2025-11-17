@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { data, useParams } from 'react-router-dom'
 import Loading from '../Components/Loading'
 import HeroSection from '../Components/HeroSection'
 
@@ -45,19 +45,36 @@ const RecipeDetails = () => {
   }
 
   return (
-    <div className='w-full'>
-      <HeroSection title={recipe?.label} image={recipe?.image}/>
+    <div className="w-full">
+      <HeroSection title={recipe?.label} image={recipe?.image} />
 
-      <div className='w-full px-4 lg:px-20 pt-5'>
+      <div className="w-full px-4 lg:px-20 pt-5"></div>
 
-      </div>
+      <div className="flex gap-10 items-center justify-center px-4">
+        <div className="dlex flex-col justify-between">
+          <span className="text-white text-center border border-gray-500 py-1 px-2 rounded-full mb-1">
+            {recipe.calories.toFixed(2)}
+          </span>
+          <p className="text-neutral-100 text-[12px] md:text-sm">CALORIES</p>
+        </div>
+        <div className="dlex flex-col justify-between">
+          <span className="text-white text-center border border-gray-500 py-1 px-2 rounded-full mb-1">
+            {recipe.calories.toFixed(2)}
+          </span>
+          <p className="text-neutral-100 text-[12px] md:text-sm">TOTAL TIME </p>
+        </div>
+        <div className="dlex flex-col justify-between">
+          <span className="text-white text-center border border-gray-500 py-1 px-2 rounded-full mb-1">
+            {recipe.calories.toFixed(2)}
+          </span>
+          <p className="text-neutral-100 text-[12px] md:text-sm">SERVINGS</p>
+        </div>
+        <div className='w-full flex flex-col md:flex-row gap-8'>
 
-
-      <div className='flex gap-10 items-center justify-center px-4'>
-
+        </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default RecipeDetails

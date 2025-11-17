@@ -16,7 +16,7 @@ const Recipes = () => {
     setSearch(e.target.value);
   };
 
-  const handleSearchRecipe = async (e) => {
+  const handleSearchRecipe = (e) => {
     e.preventDefault();
     setQuery(search);
   };
@@ -26,11 +26,11 @@ const Recipes = () => {
   };
 
   useEffect(() => {
-    setLoading(true);
     const fetchRecipe = async () => {
+      setLoading(true);
       try {
         const data = await fetchRecipes({ query, limit });
-        setRecipes(data);
+        setRecipes(data); // data is an array
       } catch (error) {
         console.log(error);
       } finally {
@@ -43,7 +43,7 @@ const Recipes = () => {
   if (loading) {
     return <Loading />;
   }
-  console.log(recipes, "hello");
+
   return (
     <div className="w-full">
       <div className="w-full flex items-center justify-center pt-10 pb-5 px-0 md:px-10">
@@ -57,10 +57,10 @@ const Recipes = () => {
         </form>
       </div>
 
-      {recipes?.length > 0 ? (
+      {recipes.length > 0 ? (
         <>
           <div className="w-full grid lg:grid-cols-4 gap-10 px-0 lg:px-10 py-10">
-            {recipes?.map((item) => (
+            {recipes.map((item) => (
               <RecipeCard recipe={item} key={item.id} />
             ))}
           </div>
