@@ -21,7 +21,7 @@ const NavBar = () => {
         <div className="hidden md:flex text-white gap-20 ">
           <Link to="/">Home</Link>
           <Link to="/recipeDetails">Explore</Link>
-          <Link to="">Favourite</Link>
+          <Link to="/favorites">Favourite</Link>
           <Link to="">Contact</Link>
         </div>
         <Button

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const RecipeCard = ({ recipe }) => {
   const {id, image, name,   label,  mealType,  } = recipe;
-
+  
  
   return (
     <Link to={`/recipes/${id}`} className=" w-full ">
@@ -17,8 +17,7 @@ const RecipeCard = ({ recipe }) => {
         <div className="p-3">
           <p className="text-white font-semibold">{name}</p>
           <div className="mt-2 flex items-center">
-            <MdFavoriteBorder className="text-white w-6 h-6 " />
-
+            <MdFavoriteBorder className="text-white w-4 h-6 " />
             <span className="px-2 py-1 text-[12px] capitalize bg-[#0c452243] shadow-xl rounded-full   text-green-500">
               {mealType}
             </span>

@@ -4,6 +4,8 @@ import Home from './Pages/Home'
 import NavBar from './Components/Layouts/NavBar'
 import Footer from './Components/Layouts/Footer';
 import RecipeDetails from './Pages/RecipeDetails'
+import Favorites from './Pages/Favorites';
+
 
 const App = () => {
   return (
@@ -12,6 +14,7 @@ const App = () => {
       <Routes>
         <Route index="/" element={<Home />} />
         <Route path="/recipeDetails/:id" element={<RecipeDetails />} />
+        <Route path="/favorites" element={<Favorites/>}/>
       </Routes>
       <Footer />
     </div>
